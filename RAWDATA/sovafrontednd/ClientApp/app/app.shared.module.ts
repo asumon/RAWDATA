@@ -12,6 +12,8 @@ import { UserComponent } from './components/User/user.component';
 import { PostService } from '../PostService';
 import { PostComponent } from './components/posts/post.component';
 import { PaginationComponent } from './components/pagination/paging.component';
+import { userService } from '../userService';
+import { showUserComponent } from './components/showUser/showUser.component';
 
 @NgModule({
     declarations: [
@@ -21,9 +23,10 @@ import { PaginationComponent } from './components/pagination/paging.component';
         UserComponent,
         SearchComponent,
         HomeComponent,
-        PaginationComponent
+        PaginationComponent,
+        showUserComponent
     ],
-    providers: [ PostService ],
+    providers: [ PostService, userService ],
     imports: [
         CommonModule,
         HttpModule,
@@ -32,6 +35,7 @@ import { PaginationComponent } from './components/pagination/paging.component';
             
             { path: 'home', component: HomeComponent },
             { path: 'post/:id', component: PostComponent },
+            { path: 'showUser/:id', component: showUserComponent },
             { path: 'user', component: UserComponent },
             { path: 'search', component: SearchComponent },
             { path: 'search/:term', component: SearchComponent },

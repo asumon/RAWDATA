@@ -34,7 +34,7 @@ namespace SovaApi.Controllers
             var users = UserServices.GetAllUser().ToList();
 
             var result = users.Select(x => {
-                var userslist = new userListModel {  Name = x.Name, Location = x.Location };
+                var userslist = new userListModel { id = x.Id, Name = x.Name, Location = x.Location };
                 userslist.LinkUrl = Url.Link(nameof(GetUserById), new { x.Id });
                 return userslist;
             });

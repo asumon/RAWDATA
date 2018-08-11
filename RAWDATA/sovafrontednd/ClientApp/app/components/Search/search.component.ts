@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
-import { PostService } from '../../../PostService';
+import {PostService} from '../../../PostService';
 import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({

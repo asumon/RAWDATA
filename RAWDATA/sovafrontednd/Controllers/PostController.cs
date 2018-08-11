@@ -48,9 +48,9 @@ namespace sovafrontednd.Controllers
 
 
         [HttpGet(Name = nameof(GetAllPosts))]
-        public IActionResult GetAllPosts(Paging pagingInfo)
+        public IActionResult GetAllPosts()
         {
-            var posts = postservice.GetAllPost(pagingInfo).ToList();
+            var posts = postservice.GetAllPost().ToList();
 
             var result = posts.Select(
                     x => {

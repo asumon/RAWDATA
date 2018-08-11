@@ -12,12 +12,12 @@ export class PostService {
     }
 
     getPostById(postId: number) {
-        //console.log('http://localhost:51644/api/posts/19' + postId);
+        console.log('http://localhost:51644/api/posts/19' + postId);
         return this.http.get('http://localhost:51644/api/posts/' + postId).map((res: any) => res.json());
     }
 
     getSearchPost(search: string) {
-       // console.log('http://localhost:51644/api/Search' + search)
+        console.log('http://localhost:51644/api/Search' + search)
         return this.http.get('http://localhost:51644/api/Search/' + search).map((res: any) => res.json());
     }
 }
