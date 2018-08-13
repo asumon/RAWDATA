@@ -1,1 +1,1 @@
-# sova Viewer Applivation
+# sova Viewer Application
