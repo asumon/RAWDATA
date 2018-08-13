@@ -12,16 +12,16 @@ namespace SovaDataBase
     {
         public IEnumerable<KeySearch> GetSearchResult(string searchTerm)
         {
-           using ( var db = new SovaDbContext())
+            using (var db = new SovaDbContext())
             {
 
                 return db.KeySearch.FromSql("call keysearch({0})", searchTerm).ToList();
-            } 
+            }
         }
 
 
 
 
-        }
     }
+}
 

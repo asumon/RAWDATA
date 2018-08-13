@@ -21,8 +21,8 @@ namespace SovaDataBase
         {
             base.OnConfiguring(optionsBuilder);
 
-           // optionsBuilder.UseMySql("server=127.0.0.1;port=3306;database=raw3;uid=root;password=mysql");
-            optionsBuilder.UseMySql("server=wt-220.ruc.dk;database=raw3;user=mahuq;password=mahuq_457");
+            optionsBuilder.UseMySql("server=127.0.0.1;port=3306;database=raw3;uid=root;password=mysql");
+           // optionsBuilder.UseMySql("server=wt-220.ruc.dk;database=raw3;user=mahuq;password=mahuq_457");
 
         }
 

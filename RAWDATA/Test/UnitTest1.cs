@@ -1,9 +1,7 @@
-using sovafrontednd.Controllers;
 using System.Linq;
 using Xunit;
 using SovaDataBase;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 
 namespace Test
 {
@@ -15,13 +13,18 @@ namespace Test
         [Fact]
         public void CheckPostsNumber()
         {
-            
-            var 
-                = new PostService();
-            var checkPost = postService.GetAllPost();
+
+            var postService = new PostService();
+            var checkPost = GetAllPost();
             Assert.Equal(2237, checkPost.Count());
 
         }
+
+        private object GetAllPost()
+        {
+            throw new NotImplementedException();
+        }
+
         [Fact]
         public void CheckUserNameById()
         {
@@ -47,7 +50,7 @@ namespace Test
 
             var ss = new SearchService();
             var result = ss.GetSearchResult("what is abs");
-            Assert.Equal(1, result.Count());
+            Assert.Single(result);
 
         }
 
