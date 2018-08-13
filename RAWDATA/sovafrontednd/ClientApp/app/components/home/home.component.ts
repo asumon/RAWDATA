@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
     sesearchTermarch: any;
     
     query:any ={
-        pagesize: 100,
+        pagesize: 20,
         Page: +this.currentPage
        
     }

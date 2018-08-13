@@ -10,6 +10,7 @@ import { PostService } from '../../../PostService';
   
 })
 export class PostComponent implements OnInit {
+    comments: any;
     postId: number;
     post: any;
     constructor(private route: ActivatedRoute, private postService: PostService) {
@@ -19,9 +20,11 @@ export class PostComponent implements OnInit {
         this.route.params.subscribe((params: Params) => { this.postId = params['id'];  });
         if (this.postId) {
             this.postService.getPostById(this.postId).subscribe(result => {
-                this.post = result[0]; console.log(this.post)
+                this.post = result[0];
+                console.log(this.post);
+                
 
             })
-        }
+         }
     }
 }

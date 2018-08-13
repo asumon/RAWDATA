@@ -7,7 +7,7 @@ li.link-active a,
 li.link-active a:hover,
 li.link-active a:focus {
     background-color: #4189C7;
-    color: white;
+    color: green;
 }
 
 /* Keep the nav menu independent of scrolling and on top of other items */
@@ -17,6 +17,7 @@ li.link-active a:focus {
     left: 0;
     right: 0;
     z-index: 1;
+    color:mediumpurple;
 }
 
 @media (min-width: 768px) {
@@ -29,9 +30,11 @@ li.link-active a:focus {
         border-radius: 0px;
         border-width: 0px;
         height: 100%;
+        color: green;
     }
     .navbar-header {
         float: none;
+        color:mediumpurple;
     }
     .navbar-collapse {
         border-top: 1px solid #444;

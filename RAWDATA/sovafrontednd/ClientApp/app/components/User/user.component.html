@@ -1,10 +1,28 @@
-<h1>Users</h1>
+<style>
+    body {
+        background-color: powderblue;
+    }
 
-<p>This is a simple example of an Angular component.</p>
+    h1 {
+        color: blue;
+        text-align: center;
+        font-size:3em;
+    }
 
-<p>Current count: <strong>{{ currentCount }}</strong></p>
+    p {
+        color: steelblue;
+        text-align: center;
+        font-size: 1.5em;
+    }
+</style>
 
-<button (click)="incrementCounter()">User List</button>
+
+
+<h1>User List</h1>
+<!-->p>Users List Of Our Database</p-->
+<!-->p>Current count: <strong>{{ currentCount }}</strong></p-->
+
+<button (click)="incrementCounter()"></button>
 <div>
     <table class="table-responsive" *ngIf="users?.length>0;else noUser" class="table table-striped">
 

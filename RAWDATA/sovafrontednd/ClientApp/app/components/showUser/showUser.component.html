@@ -1,7 +1,18 @@
-﻿
+﻿<style>
+    body {
+        background-color: powderblue;
+    }
+
+    h1 {
+        color: darkorchid;
+        text-align: center;
+        font-size: 3em;
+    }
+      
+</style>
 <div class="well well-lg">
-    <h1>Sova App</h1>
-    <p class="text-muted">Welcome to your new single-page application</p>
+    <h1>User Details</h1>
+    <!-->p class="text-muted">Welcome to your new single-page application</p-->
 
 </div>
 <div *ngIf="user">
@@ -9,11 +20,13 @@
     <div class="media">
         <div class="media-left text-center">
 
-            <img class="mr-3 img-responsive" src="emoj.jpg" alt="Generic placeholder image">
-            <div class="text-info">{{ user.location }}{{ user.age }}{{ user.id }}</div>
+            <img class="text-info" src="emoj.jpg" alt="Generic placeholder image">
+            <div class="text-info"><strong>User Name:</strong> {{ user.name }}</div>
+            <div class="text-info"><strong>Location :</strong> {{ user.location }}</div>
+            <div class="text-info"><strong>Creation Date:</strong> {{ user.creationDate  | date}}</div>
+            <div class="text-info"><strong>Age:</strong> {{ user.age }}</div>
         </div>
 
     </div>
 
-
-</div>
+  </div>

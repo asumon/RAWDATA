@@ -1,7 +1,22 @@
-﻿
+﻿<style>
+    body {
+        background-color: powderblue;
+    }
+
+    h1 {
+        color: blue;
+        text-align: center;
+    }
+
+    p {
+        color: steelblue;
+        text-align: center;
+        font-size:1.5em;
+    }
+</style>
 <div class="well well-lg">
-    <h1>Sova App</h1>
-    <p class="text-muted">Welcome to your new single-page application</p>
+    <h1> Stack Overflow Viewer Application </h1>
+    <p class="text-muted">Welcome to our single-page application</p>
 
 </div>
 <div *ngIf="post">
@@ -10,22 +25,20 @@
         <div class="media-left text-center">
 
             <img class="mr-3 img-responsive" src="emoj.jpg" alt="Generic placeholder image">
-            <div class="text-info">{{ post.userName }}</div>
+            <div class="text-info"><strong>{{ post.userName }}</strong></div>
+            <!-->h1 class="alert-success">{{post.score}}</h1-->
+                    
 
-            <h1 class="alert-success">{{post.score}}</h1>
         </div>
-
-
         <div class="media-body">
             <h3 class="">{{post.title}}</h3>
             <div class="text-muted">{{post.creationDate | date  }}</div>
-
             <div [innerHtml]="post.body"></div>
         </div>
 
-
-
     </div>
 
-
 </div>
+
+
+
