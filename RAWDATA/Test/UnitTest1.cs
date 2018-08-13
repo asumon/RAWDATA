@@ -16,7 +16,7 @@ namespace Test
 
             var postService = new PostService();
             var checkPost = GetAllPost();
-            Assert.Equal(2237, checkPost.Count());
+            Assert.Equal(2237, checkPost);
 
         }
 

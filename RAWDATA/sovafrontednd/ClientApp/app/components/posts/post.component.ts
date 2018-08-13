@@ -11,7 +11,7 @@ import { PostService } from '../../../PostService';
 })
 export class PostComponent implements OnInit {
     comments: any;
-    postId: number;
+    postId: any;
     post: any;
     constructor(private route: ActivatedRoute, private postService: PostService) {
 

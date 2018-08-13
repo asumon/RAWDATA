@@ -10,7 +10,7 @@ import { userService } from '../../../userService';
 
 })
 export class showUserComponent implements OnInit {
-    userId: number;
+    userId: any;
     user: any;
     constructor(private route: ActivatedRoute, private userService: userService) {
 

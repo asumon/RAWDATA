@@ -43,7 +43,7 @@ export class PaginationComponent implements OnChanges {
     @Input('total-items') totalItems: any;
     @Input('page-size') pageSize: any = 10;
     @Output('page-changed') pageChanged = new EventEmitter();
-    pages: any[];
+    pages :any;
     currentPage = 1;
 
     ngOnChanges() {

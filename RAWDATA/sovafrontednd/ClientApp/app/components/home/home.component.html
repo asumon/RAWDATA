@@ -14,6 +14,10 @@
         text-align:center;
      font-size:1.5em;
     }
+    a{
+        font-size:18px;
+        color:dodgerblue;
+    }
 </style>
 
 
@@ -28,7 +32,7 @@
 
         <tr *ngFor="let post of posts">
             <td><span class="glyphicon glyphicon-envelope icon"></span></td>
-            <td><a [routerLink]="['/post',post.id]">{{ post.title }}</a></td>
+            <td><a [routerLink]="['/post',post.id]">&nbsp;{{ post.title }}</a></td>
 
         </tr>
     </table>

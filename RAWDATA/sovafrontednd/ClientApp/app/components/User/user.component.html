@@ -14,6 +14,9 @@
         text-align: center;
         font-size: 1.5em;
     }
+    a {
+        font-size:20px;
+    }
 </style>
 
 
@@ -28,7 +31,7 @@
 
         <tr *ngFor="let user of users">
             <td><span class="glyphicon glyphicon-envelope icon"></span></td>
-            <td><a [routerLink]="['/showUser',user.id]">{{ user.name }}{{ user.age }}</a></td>
+            <td><a [routerLink]="['/showUser',user.id]">&nbsp;{{ user.name }}</a></td>
         </tr>
     </table>
     <ng-template #noUser><h1 class="text-danger">No user Available</h1></ng-template>
