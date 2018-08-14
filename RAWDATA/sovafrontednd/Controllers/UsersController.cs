@@ -24,7 +24,7 @@ namespace SovaApi.Controllers
         public UsersController(IUserServices UserServices, IPostService postService)
         {
             this.UserServices = UserServices;
-   
+
             this.postService = postService;
         }
 
@@ -41,7 +41,7 @@ namespace SovaApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{id}" , Name =nameof(GetUserById))]
+        [HttpGet("{id}", Name = nameof(GetUserById))]
         public IActionResult GetUserById(int id)
         {
             var User = UserServices.GetUserById(id).Select(
@@ -63,11 +63,5 @@ namespace SovaApi.Controllers
 
             return Ok(User);
         }
-
-       
-
-
-
-
     }
 }

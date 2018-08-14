@@ -38,12 +38,12 @@ namespace sovafrontednd.Controllers
 
                         return postListModel;
                     });
-                 
+
 
 
             return Ok(result);
         }
-        
+
 
         [HttpGet("{id}", Name = nameof(GetPostById))]
         public IActionResult GetPostById(int id)
@@ -68,7 +68,7 @@ namespace sovafrontednd.Controllers
                 });
             return Ok(post);
         }
-        
+
         [HttpGet("{userid}/posts")]
         public IActionResult GetAllPostForUser(int userid)
         {
@@ -82,7 +82,7 @@ namespace sovafrontednd.Controllers
                          Title = x.Title,
 
                      };
-            
+
                      return PostListModel;
 
                  });

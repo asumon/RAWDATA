@@ -11,8 +11,12 @@
     p {
         color: steelblue;
         text-align: center;
-        font-size:1.5em;
+        font-size: 1.5em;
         font-family: Arial, Helvetica, sans-serif;
+    }
+    .cmnts{
+       text-align:left;
+       margin-left:30px;
     }
 </style>
 <div class="well well-lg">
@@ -24,22 +28,45 @@
 
     <div class="media">
         <div class="media-left text-center">
-
             <img class="mr-3 img-responsive" src="emoj.jpg" alt="Generic placeholder image">
             <div class="text-info"><strong>{{ post.userName }}</strong></div>
             <!-->h1 class="alert-success">{{post.score}}</h1-->
-                    
-
         </div>
         <div class="media-body">
             <h3 class="">{{post.title}}</h3>
-            <div class="text-muted">{{post.creationDate | date  }}</div>
+            <div class="text-muted">{{post.creationDate | date }}</div>
             <div [innerHtml]="post.body"></div>
+
+
         </div>
 
     </div>
 
+    <div *ngFor="let comments of post['comments']">
+
+<div>
+        <div class="media">
+            <div class="media-left text-center">
+                <img class="mr-3 img-responsive" src="emoj.jpg" height="50" width="50" alt="Generic placeholder image">
+                <div class="text-info"><strong>User Id:{{ comments.userId}}</strong></div>
+                <div class="text-info"><strong>Date:{{ comments.commentDate | date}}</strong></div>
+                <div class="text-info"><strong>Comments Score:{{ comments.commentscore}}</strong></div>
+            </div>
+        </div>
+
+
+        <div class="media-body">
+            <div class="cmnts" [innerHtml]>{{ comments.commentText }}</div>
+        </div>
+    </div>
+  </div>
 </div>
 
 
 
+
+<!--<div *ngIf="comments.users">
+    <div *ngFor="let users of comments['users']">
+        <div class="text-muted"><strong>{{ users.name}}</strong></div>
+    </div>
+</div>-->
