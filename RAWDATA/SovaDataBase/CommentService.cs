@@ -18,14 +18,5 @@ namespace SovaDataBase
            
         }
 
-        //public IQueryable<Comments> GetAllCommentsForPost(int postId)
-        //{
-        //    return DbContext.Comments.Where(pid => pid.PostId==postId);
-
-            
-        // }
-
-
-
-}
+   }
 }

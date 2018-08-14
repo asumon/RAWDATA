@@ -8,7 +8,7 @@
         text-align: center;
     }
 
-    p {
+    h2 {
         color: steelblue;
         text-align: center;
         font-size: 1.5em;
@@ -16,12 +16,28 @@
     }
     .cmnts{
        text-align:left;
-       margin-left:30px;
+       margin-left:70px;
+       font-size:1.5em;
+       color:midnightblue;
+    }
+
+    .text-info {
+        text-align:left;
+    }
+    .sc{
+        height:150px;
+        width:auto;
+        position:absolute;
+        top:0;
+        left:10px;
+        z-index:1;
+        
     }
 </style>
 <div class="well well-lg">
     <h1> Stack Overflow Viewer Application </h1>
-    <p class="text-muted">Welcome to our single-page application</p>
+    <h2 class="text-muted">Welcome to our single-page application</h2>
+    <img class="sc" src="scard.png" alt="Generic placeholder image">
 
 </div>
 <div *ngIf="post">
@@ -45,18 +61,18 @@
     <div *ngFor="let comments of post['comments']">
 
 <div>
-        <div class="media">
-            <div class="media-left text-center">
-                <img class="mr-3 img-responsive" src="emoj.jpg" height="50" width="50" alt="Generic placeholder image">
-                <div class="text-info"><strong>User Id:{{ comments.userId}}</strong></div>
-                <div class="text-info"><strong>Date:{{ comments.commentDate | date}}</strong></div>
-                <div class="text-info"><strong>Comments Score:{{ comments.commentscore}}</strong></div>
-            </div>
+    <div class="media">
+        <div class="media-left text-center" id="subcomp">
+            <img class="mr-3 img-responsive" src="emoj.jpg" alt="Generic placeholder image">
+            <div class="text-info"><strong>User Id:{{ comments.userId}}</strong></div>
+            <div class="text-info"><strong>Date:{{ comments.commentDate | date}}</strong></div>
+            <div class="text-info"><strong>Comments Score:{{ comments.commentscore}}</strong></div>
         </div>
+    </div>
 
 
         <div class="media-body">
-            <div class="cmnts" [innerHtml]>{{ comments.commentText }}</div>
+                  <div class="cmnts" [innerHtml]>{{ comments.commentText }}</div>
         </div>
     </div>
   </div>
